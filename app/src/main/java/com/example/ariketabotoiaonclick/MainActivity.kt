@@ -80,7 +80,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
             Button(
                 onClick = {
-                    nota.value++
+                    if (nota.value < 10) {
+                        nota.value++
+                    }
                 }
             ) {
                 Text("Nota +1")
